@@ -1,61 +1,262 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🐾 Pet Showcase - Landing Page & API
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://via.placeholder.com/400x100/4F46E5/FFFFFF?text=Pet+Showcase" alt="Pet Showcase Logo" width="400">
 </p>
 
-## About Laravel
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-11.x-red.svg" alt="Laravel Version">
+  <img src="https://img.shields.io/badge/PHP-8.4+-blue.svg" alt="PHP Version">
+  <img src="https://img.shields.io/badge/Status-En%20Desarrollo-yellow.svg" alt="Development Status">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📋 Descripción del Proyecto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Pet Showcase** es una aplicación web desarrollada con Laravel que combina una hermosa landing page para mostrar mascotas con una API RESTful completa para la gestión de datos de mascotas. El proyecto está diseñado para ser tanto una vitrina visual atractiva como una solución backend robusta para desarrolladores externos.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🎯 Objetivos del Proyecto
 
-## Learning Laravel
+- **Landing Page Interactiva**: Mostrar mascotas de forma atractiva y responsiva
+- **API RESTful**: Permitir a clientes externos gestionar mascotas a través de endpoints seguros
+- **Gestión Completa**: CRUD completo para mascotas, categorías, y más
+- **Documentación API**: Endpoints bien documentados para facilitar la integración
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ✨ Características Principales
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🌐 Landing Page
+- [ ] Galería de mascotas con filtros por categoría
+- [ ] Información detallada de cada mascota
+- [ ] Diseño responsivo y moderno
+- [ ] Formulario de contacto
+- [ ] Sistema de favoritos
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🔌 API RESTful
+- [ ] Autenticación con Laravel Sanctum
+- [ ] CRUD completo de mascotas
+- [ ] Gestión de categorías (perros, gatos, etc.)
+- [ ] Filtrado y búsqueda avanzada
+- [ ] Paginación automática
+- [ ] Validación de datos robusta
+- [ ] Documentación con Swagger/OpenAPI
 
-## Laravel Sponsors
+### 🛡️ Características Adicionales
+- [ ] Sistema de usuarios y roles
+- [ ] Subida de imágenes optimizada
+- [ ] Cache inteligente
+- [ ] Rate limiting para la API
+- [ ] Logs de auditoría
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🛠️ Stack Tecnológico
 
-### Premium Partners
+- **Backend**: Laravel 11.x
+- **Base de Datos**: MySQL/PostgreSQL
+- **Frontend**: Blade Templates + Vite + TailwindCSS
+- **API**: Laravel API Resources + Sanctum
+- **Testing**: PHPUnit + Laravel Testing
+- **Documentación**: Laravel API Documentation
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 📁 Estructura del Proyecto
 
-## Contributing
+```
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Web/           # Controladores de la Landing Page
+│   │   │   └── Api/           # Controladores de la API
+│   │   ├── Requests/          # Form Requests para validación
+│   │   └── Resources/         # API Resources
+│   ├── Models/                # Modelos Eloquent
+│   └── Services/              # Lógica de negocio
+├── database/
+│   ├── migrations/            # Migraciones de BD
+│   ├── seeders/               # Datos de prueba
+│   └── factories/             # Factories para testing
+├── resources/
+│   ├── views/                 # Templates Blade
+│   ├── js/                    # JavaScript/Vue components
+│   └── css/                   # Estilos (TailwindCSS)
+├── routes/
+│   ├── web.php               # Rutas de la Landing Page
+│   └── api.php               # Rutas de la API
+└── tests/                    # Tests automatizados
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🚀 Instalación y Configuración
 
-## Code of Conduct
+### Prerrequisitos
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- PHP 8.4 o superior
+- Composer
+- Node.js y npm
+- MySQL/PostgreSQL
+- Git
 
-## Security Vulnerabilities
+### Pasos de Instalación
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/tu-usuario/pet-showcase.git
+cd pet-showcase
+```
 
-## License
+2. **Instalar dependencias de PHP**
+```bash
+composer install
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3. **Instalar dependencias de Node.js**
+```bash
+npm install
+```
+
+4. **Configurar el archivo de entorno**
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+5. **Configurar la base de datos en `.env`**
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=pet_showcase
+DB_USERNAME=tu_usuario
+DB_PASSWORD=tu_contraseña
+```
+
+6. **Ejecutar migraciones y seeders**
+```bash
+php artisan migrate --seed
+```
+
+7. **Compilar assets frontend**
+```bash
+npm run dev
+# o para producción: npm run build
+```
+
+8. **Iniciar el servidor de desarrollo**
+```bash
+php artisan serve
+```
+
+## 🔧 Comandos Útiles
+
+```bash
+# Ejecutar tests
+php artisan test
+
+# Limpiar cache
+php artisan config:clear
+php artisan cache:clear
+
+# Generar documentación API
+php artisan l5-swagger:generate
+
+# Crear nuevos recursos
+php artisan make:model Mascota -mcr
+php artisan make:controller Api/MascotaController --api
+php artisan make:request StoreMascotaRequest
+```
+
+## 📚 Documentación de la API
+
+Una vez que el proyecto esté en funcionamiento, la documentación completa de la API estará disponible en:
+
+- **Desarrollo**: `http://localhost:8000/api/documentation`
+- **Producción**: `https://tu-dominio.com/api/documentation`
+
+### Endpoints Principales (Planificados)
+
+```
+GET    /api/mascotas           # Listar todas las mascotas
+POST   /api/mascotas           # Crear nueva mascota
+GET    /api/mascotas/{id}      # Obtener mascota específica
+PUT    /api/mascotas/{id}      # Actualizar mascota
+DELETE /api/mascotas/{id}      # Eliminar mascota
+
+GET    /api/categorias         # Listar categorías
+POST   /api/categorias         # Crear categoria
+```
+
+## 🧪 Testing
+
+```bash
+# Ejecutar todos los tests
+php artisan test
+
+# Ejecutar tests con coverage
+php artisan test --coverage
+
+# Ejecutar solo tests unitarios
+php artisan test --testsuite=Unit
+
+# Ejecutar solo tests de funcionalidad
+php artisan test --testsuite=Feature
+```
+
+## 🌟 Roadmap del Proyecto
+
+### Fase 1: Base del Proyecto ✅
+- [x] Configuración inicial de Laravel
+- [x] Estructura de carpetas definida
+- [x] README inicial
+
+### Fase 2: Modelos y Migraciones
+- [ ] Modelo Mascota con sus relaciones
+- [ ] Modelo Categoria
+- [ ] Modelo Usuario (para API)
+- [ ] Migraciones y seeders
+
+### Fase 3: API RESTful
+- [ ] Controladores API
+- [ ] Autenticación con Sanctum
+- [ ] Validaciones y Form Requests
+- [ ] API Resources
+- [ ] Tests de API
+
+### Fase 4: Landing Page
+- [ ] Diseño responsivo con TailwindCSS
+- [ ] Componentes Blade reutilizables
+- [ ] Galería de mascotas
+- [ ] Filtros y búsqueda
+
+### Fase 5: Características Avanzadas
+- [ ] Sistema de favoritos
+- [ ] Subida de imágenes optimizada
+- [ ] Cache y optimización
+- [ ] Documentación completa
+
+## 🤝 Contribución
+
+¡Las contribuciones son bienvenidas! Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/nueva-caracteristica`)
+3. Commit tus cambios (`git commit -am 'Agrega nueva caracteristica'`)
+4. Push a la rama (`git push origin feature/nueva-caracteristica`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 👨‍💻 Autor
+
+**Tu Nombre**
+- GitHub: [@tu-usuario](https://github.com/tu-usuario)
+- Email: tu-email@ejemplo.com
+
+## 🙏 Agradecimientos
+
+- Laravel Framework por proporcionar una base sólida
+- TailwindCSS por el sistema de diseño
+- La comunidad de Laravel por su apoyo continuo
+
+---
+
+<p align="center">
+  Hecho con ❤️ para los amantes de las mascotas
+</p>
